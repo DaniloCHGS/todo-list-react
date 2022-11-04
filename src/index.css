@@ -106,6 +106,7 @@ input[type=text]::-webkit-input-placeholder {
   color: white;
   font-weight: 500;
   border-radius: 5px;
+  margin-top: 10px;
 }
 
 .list-item:hover {

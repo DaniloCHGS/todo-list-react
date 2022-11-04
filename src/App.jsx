@@ -1,4 +1,15 @@
+import { useState } from 'react';
+import Item from './Item'
+
 function App() {
+
+  const [list, setItem] = useState([
+    'React',
+    'JavaScript',
+    'Node',
+    'Laravel'
+  ])
+
   return (
     <div className="app">
       <div className="todo">
@@ -18,7 +29,13 @@ function App() {
         </div>
         <div className="list-container">
           <ul>
-            <li className="list-item">Estudar React</li>
+            {
+              list.map(item => {
+                return (
+                  <Item label={item} />
+                )
+              })
+            }
           </ul>
         </div>
       </div>

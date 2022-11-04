@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --the-green: #4db977;
+  --the-blue-dark: #2b2d42;
+  --the-blue-ligth: #484c69;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--the-blue-dark);
+  align-items: center;
+}
+
+.input form,
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  width: 300px;
+}
+
+.title {
+  margin: 50px 0;
+  position: relative;
+}
+
+.title h1::after {
+  content: "";
+  position: absolute;
+  background-color: var(--the-green);
+  left: 75px;
+  bottom: 0;
+  width: 150px;
+  height: 3px;
+}
+
+.title h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+}
+
+input[type=text] {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, .5);
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin: 0 0 10px 0;
+}
+
+input[type=text]::-webkit-input-placeholder {
+  font-size: 17px;
+}
+
+.btn-primary {
+  padding: 8px 0;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 600;
+  border: 1px solid var(--the-green);
+  background-color: var(--the-green);
+  color: white;
+}
+
+.btn-primary, .list-item {
+  transition: all .2s ease-in-out
+}
+.btn-primary:hover, .list-item:hover {
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--the-green);
+}
+
+.list-container {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.list-item {
+  border: 1px solid var(--the-blue-ligth);
+  background-color: var(--the-blue-ligth);
+  width: 100%;
+  padding: 12px 10px;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.list-item:hover {
+  background-color: transparent;
+  border-width: 2px;
+}

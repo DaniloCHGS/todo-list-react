@@ -1,14 +1,12 @@
-import { useState } from 'react';
-import Item from './Item'
+import { useState } from "react"
+import Item from "./Item"
 
 function App() {
+  const [list, setItem] = useState(["React", "JavaScript", "Node", "Laravel"])
 
-  const [list, setItem] = useState([
-    'React',
-    'JavaScript',
-    'Node',
-    'Laravel'
-  ])
+  const handleDigit = () => {
+    
+  }
 
   return (
     <div className="app">
@@ -20,22 +18,17 @@ function App() {
           <form action="">
             <input
               type="text"
-              name=""
-              id=""
               placeholder="Adicionar uma tarefa"
+              onChange={handleDigit}
             />
             <button className="btn-primary">Adicionar</button>
           </form>
         </div>
         <div className="list-container">
           <ul>
-            {
-              list.map(item => {
-                return (
-                  <Item label={item} />
-                )
-              })
-            }
+            {list.map((item) => {
+              return <Item label={item} />
+            })}
           </ul>
         </div>
       </div>
